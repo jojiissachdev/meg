@@ -2518,11 +2518,16 @@ div.aligncenter,
     padding-left: 0;
     padding-right: 0;
 }
-
+.container-fluid {
+    margin-left: 50px;
+    margin-right: 50px;
+}
 .container .container {
     width: 100%;
 }
-
+.logo img{
+    width: 200px !important;
+}
 .single-right .site-content,
 .single-left .site-content {
     padding-top: 0;
@@ -8109,4 +8114,139 @@ body.boxed {
 .contact-section .social-links li a:hover {
     color: #ffffff;
     background: #f7542b;
+}
+
+/*** 
+
+====================================================================
+	vertical card
+====================================================================
+
+ ***/
+
+/* Wrapper spacing for multiple cards */
+/* Main Card */
+.horizontal-card .twocolumn {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+/* Hover */
+.horizontal-card .twocolumn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Both Columns Base */
+.horizontal-card .col-sm-6 {
+    flex-direction: column;
+    justify-content: center;
+}
+.horizontal-card .col-sm-6 {
+    padding: 0;
+}
+
+/* ========================= */
+/* CASE 1: CONTENT ON RIGHT */
+/* (image is first, content is last) */
+/* ========================= */
+.horizontal-card .twocolumn>.col-sm-6:last-child:not(:has(figure)) {
+    padding: 25px 30px 25px 40px;
+    /* more left padding */
+}
+
+/* ========================= */
+/* CASE 2: CONTENT ON LEFT */
+/* (content is first, image is last) */
+/* ========================= */
+.horizontal-card .twocolumn>.col-sm-6:first-child:not(:has(figure)) {
+    padding: 25px 40px 25px 30px;
+    /* more right padding */
+}
+/* IMAGE COMMON */
+.horizontal-card figure {
+    margin: 0;
+    width: 100%;
+    height: 60%;
+}
+
+.horizontal-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Zoom */
+.horizontal-card .twocolumn:hover img {
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* CASE 1: IMAGE LEFT */
+/* ========================= */
+.horizontal-card .twocolumn>.col-sm-6:first-child figure img {
+    border-radius: 20px 0 0 20px;
+}
+
+/* ========================= */
+/* CASE 2: IMAGE RIGHT */
+/* ========================= */
+.horizontal-card .twocolumn>.col-sm-6:last-child figure img {
+    border-radius: 0 20px 20px 0;
+}
+
+/* Width Control */
+.horizontal-card .col-sm-6:first-child {
+    width: 50%;
+}
+
+.horizontal-card .col-sm-6:last-child {
+    width: 50%;
+}
+
+/* Text Styling */
+.horizontal-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.horizontal-card .mdlpagehd {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.horizontal-card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.horizontal-card ul {
+    margin-top: 8px;
+    padding-left: 18px;
+}
+
+.horizontal-card ul li {
+    margin-bottom: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .horizontal-card .twocolumn {
+        flex-direction: column;
+    }
+
+    .horizontal-card figure img {
+        height: 220px;
+        border-radius: 20px 20px 0 0 !important;
+    }
 }
