@@ -2527,6 +2527,7 @@ div.aligncenter,
 }
 .logo img{
     width: 200px !important;
+    margin:10px 0;
 }
 .single-right .site-content,
 .single-left .site-content {
@@ -8124,129 +8125,397 @@ body.boxed {
 
  ***/
 
-/* Wrapper spacing for multiple cards */
-/* Main Card */
-.horizontal-card .twocolumn {
+/* .twocolumn {
+    height: 420px;
     display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
     margin-bottom: 30px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Hover */
-.horizontal-card .twocolumn:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-}
-
-/* Both Columns Base */
-.horizontal-card .col-sm-6 {
+.twocolumn .col-sm-6 {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-.horizontal-card .col-sm-6 {
     padding: 0;
 }
 
-/* ========================= */
-/* CASE 1: CONTENT ON RIGHT */
-/* (image is first, content is last) */
-/* ========================= */
-.horizontal-card .twocolumn>.col-sm-6:last-child:not(:has(figure)) {
-    padding: 25px 30px 25px 40px;
-    /* more left padding */
-}
-
-/* ========================= */
-/* CASE 2: CONTENT ON LEFT */
-/* (content is first, image is last) */
-/* ========================= */
-.horizontal-card .twocolumn>.col-sm-6:first-child:not(:has(figure)) {
-    padding: 25px 40px 25px 30px;
-    /* more right padding */
-}
-/* IMAGE COMMON */
-.horizontal-card figure {
+.twocolumn figure {
     margin: 0;
-    width: 100%;
-    height: 60%;
+    height: 100%;
 }
 
-.horizontal-card figure img {
+.twocolumn figure img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+     object-fit: cover;
 }
 
-/* Hover Zoom */
-.horizontal-card .twocolumn:hover img {
-    transform: scale(1.05);
+.twocolumn .content-box {
+    padding: 20px;
+    overflow: hidden;
 }
 
-/* ========================= */
-/* CASE 1: IMAGE LEFT */
-/* ========================= */
-.horizontal-card .twocolumn>.col-sm-6:first-child figure img {
-    border-radius: 20px 0 0 20px;
-}
-
-/* ========================= */
-/* CASE 2: IMAGE RIGHT */
-/* ========================= */
-.horizontal-card .twocolumn>.col-sm-6:last-child figure img {
-    border-radius: 0 20px 20px 0;
-}
-
-/* Width Control */
-.horizontal-card .col-sm-6:first-child {
-    width: 50%;
-}
-
-.horizontal-card .col-sm-6:last-child {
-    width: 50%;
-}
-
-/* Text Styling */
-.horizontal-card h2 {
-    font-size: 24px;
-    font-weight: 700;
+.twocolumn h2 {
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
-.horizontal-card .mdlpagehd {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.horizontal-card p {
-    color: #555;
+.twocolumn p {
+    font-size: 14px;
     line-height: 1.5;
 }
 
-.horizontal-card ul {
-    margin-top: 8px;
+.twocolumn:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .twocolumn {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .twocolumn .col-sm-6 {
+        width: 100%;
+    }
+
+    .twocolumn figure {
+        height: 220px;
+    }
+} */
+
+/* ===== SECTION BACKGROUND ===== */
+.section-wrapper {
+    background: #f5f7fb;
+    padding: 50px 0;
+}
+
+/* ===== CARD WRAPPER ===== */
+.custom-card {
+    margin-bottom: 40px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* ===== RIGHT SIDE GRADIENT ===== */
+.custom-card::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #0a3d91, #1db954);
+}
+
+/* ===== ROW FIX ===== */
+.custom-card .row {
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+}
+
+
+/* ===== COLUMNS ===== */
+.custom-card .col-sm-6 {
+    display: flex;
+    padding: 0;
+}
+
+/* ===== IMAGE ===== */
+.custom-card figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* IMAGE ZOOM ON HOVER */
+.custom-card:hover figure img {
+    transform: scale(1.05);
+}
+
+/* ===== CONTENT ===== */
+.custom-card .content-box {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ===== TEXT ===== */
+.custom-card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.custom-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* ===== LIST ===== */
+.custom-card ul {
     padding-left: 18px;
 }
 
-.horizontal-card ul li {
-    margin-bottom: 6px;
+.custom-card ul li {
+    font-size: 13px;
+    margin-bottom: 5px;
 }
 
-/* Responsive */
+/* ===== INNER SOFT GLOW ===== */
+.custom-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    pointer-events: none;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.03);
+}
+
+/* ========================= */
+/* ===== MOBILE VIEW ===== */
+/* ========================= */
 @media (max-width: 768px) {
-    .horizontal-card .twocolumn {
-        flex-direction: column;
+
+    /* stack layout */
+    .custom-card .row.horizontal-card {
+        flex-direction: column !important;
     }
 
-    .horizontal-card figure img {
-        height: 220px;
-        border-radius: 20px 20px 0 0 !important;
+    /* hide images completely */
+    .custom-card figure,
+    .custom-card figure img {
+        display: none;
     }
+
+    /* full width content */
+    .custom-card .horizontal-card .col-sm-6.content-card {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    /* spacing adjustment */
+    .custom-card .content-box {
+        padding: 20px;
+    }
+
+    /* reduce shadow for mobile */
+    .custom-card {
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+}
+.about-card.premium {
+    height: 380px;
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+}
+
+/* top gradient border */
+.about-card.premium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(90deg, #0a3d91, #1db954); /* blue → green */
+}
+
+/* icon circle */
+.icon-wrap {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #0a3d91, #1db954);
+    color: #fff;
+    font-size: 28px;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* heading */
+.about-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* content */
+.about-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* hover effect */
+.about-card.premium:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* subtle glow on hover */
+.about-card.premium:hover .icon-wrap {
+    box-shadow: 0 0 15px rgba(29,185,84,0.6);
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+/* SECTION BG */
+.vision-mission-section {
+    background: #04192b;
+}
+
+/* CARD */
+.vm-card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    height: 100%;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+}
+
+/* TOP BORDER */
+.vm-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #0a3d91, #1db954);
+}
+
+/* BOTTOM BORDER */
+.vm-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #1db954, #0a3d91);
+}
+
+/* ICON */
+.vm-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #0a3d91, #1db954);
+    color: #fff;
+    font-size: 32px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+.vm-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* TEXT */
+.vm-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* HOVER EFFECT */
+.vm-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* ICON GLOW */
+.vm-card:hover .vm-icon {
+    box-shadow: 0 0 20px rgba(29,185,84,0.6);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .vm-card {
+        margin-bottom: 20px;
+    }
+}
+/* MAKE ROW FLEX */
+.vision-mission-section .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* MAKE COLUMNS FLEX */
+.vision-mission-section .col-md-6 {
+    display: flex;
+}
+
+/* CARD TAKES FULL HEIGHT */
+.vm-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center content vertically */
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
 }

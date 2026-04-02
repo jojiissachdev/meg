@@ -2142,6 +2142,9 @@ div.fh-button .vc_btn3.vc_btn3-style-custom:visited {
 .twocolumn li {
     margin-bottom: 20px;
 }
+.twocolumn .content-box li {
+    margin-bottom: 0 !important;
+}
 
 .borderbox {
     padding: 15px;
