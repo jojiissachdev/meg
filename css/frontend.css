@@ -309,9 +309,10 @@ Special Classes
 }
 
 .fh-contact-box .contact-box-title {
-    background-color: #50B42E;
-    padding: 10px 30px;
+    padding: 25px;
     text-transform: capitalize;
+    text-align: center;
+    color: #fff;
 }
 
 

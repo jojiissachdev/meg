@@ -1824,7 +1824,7 @@ div.aligncenter,
 }
 
 .header-v1 .menu-item-text i:before {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .header-v1 .menu-item-text .extra-text {
@@ -1837,7 +1837,7 @@ div.aligncenter,
 }
 
 .header-v1 .menu-item-text p.number {
-    font-size: 24px;
+    font-size: 13px;
     margin-bottom: 0;
 }
 
@@ -2280,7 +2280,6 @@ div.aligncenter,
     overflow-y: auto;
     color: #848484;
     z-index: -999999;
-    border: 1px solid #f4f4f4;
 }
 
 .primary-mobile-nav .close-canvas-mobile-panel {
@@ -2305,7 +2304,7 @@ div.aligncenter,
 }
 
 .primary-mobile-nav ul.menu li {
-    padding: 15px 20px;
+    padding: 5px 20px;
     position: static;
 }
 
@@ -2383,9 +2382,9 @@ div.aligncenter,
     color: #50B42E;
 }
 
-.primary-mobile-nav .extra-item {
+/* .primary-mobile-nav .extra-item {
     padding: 0 20px 30px;
-}
+} */
 
 .primary-mobile-nav .menu-item-text {
     color: #222;
@@ -8518,4 +8517,204 @@ body.boxed {
 
 .text-capitalize {
     text-transform: capitalize !important;
+}
+
+
+/* Container (mobile panel) */
+.primary-mobile-nav {
+    background: #0f172a; 
+    padding: 20px 0;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+}
+
+/* Close button */
+.close-canvas-mobile-panel {
+    color: #fff;
+    font-size: 28px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    text-decoration: none;
+}
+
+/* Menu list */
+.primary-mobile-nav .menu {
+    list-style: none;
+    padding: 60px 0 0;
+    margin: 0;
+}
+
+/* Each item */
+.primary-mobile-nav .menu li {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+}
+
+/* Links */
+.primary-mobile-nav .menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #e5e7eb;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+/* Hover effect */
+.primary-mobile-nav .menu li a:hover {
+    background: rgba(255,255,255,0.05);
+    color: #ffffff;
+    border-left: 3px solid #22c55e; /* accent color */
+}
+#site-navigation .menu li a:hover {
+    background: rgba(255,255,255,0.05);
+    color: #ffffff;
+    border-bottom: 3px solid #22c55e; /* accent color */
+}
+
+/* Active item (optional) */
+.menu li a.active {
+    background: rgba(34,197,94,0.1);
+    border-left: 3px solid #22c55e;
+    color: #22c55e;
+}
+
+/* Bottom contact section */
+.extra-item {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.extra-item i {
+    font-size: 22px;
+    color: #22c55e;
+}
+
+.extra-text .fh-text {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.extra-text .number {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+}
+.menu li.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #1db954, #0a3d91);
+}
+
+/* Scope ONLY inside contact address */
+
+.cotact-adress {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Make columns flex */
+.cotact-adress > div[class*="col-"] {
+    display: flex;
+}
+
+/* Make box fill full height */
+.cotact-adress .fh-contact-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cotact-adress .fh-contact-box {
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+    background-color: #f7f7f7;
+}
+
+
+/* Hover premium lift */
+.cotact-adress .fh-contact-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Title styling */
+.cotact-adress .contact-box-title {
+   
+    background: linear-gradient(90deg, #1db954, #0a3d91);
+}
+.cotact-adress .contact-box-title h3 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Info text */
+.cotact-adress .info-title {
+    font-weight: 600;
+    color: #1db954;
+}
+
+.cotact-adress .info-details {
+    color: #444;
+}
+.cotact-adress .fh-contact-box::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #1db954, #0a3d91);
+}
+
+@media (max-width: 767px) {
+    /* Stack columns vertically */
+    .cotact-adress {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* center horizontally */
+    }
+
+    /* Each column fills width nicely */
+    .cotact-adress > div[class*="col-"] {
+        width: 90%; /* or 95% for margin */
+        max-width: 400px;
+        margin-bottom: 20px; /* space between boxes */
+        display: flex;
+    }
+
+    /* Box fills its column width */
+    .cotact-adress .fh-contact-box {
+        width: 100%;
+    }
+    .loginpage.secpadd {
+        padding-top: 15px;
+    }
+    .loginpage.secpadd .padbtm70{
+        padding-bottom: 15px !important;
+    }
+    
 }
