@@ -299,7 +299,7 @@ th {
  ***/
 
 body {
-    color: #848484;
+    color: #000;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -8343,6 +8343,7 @@ body.boxed {
 
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: all 0.35s ease;
+    margin-top: 20px;
 }
 
 /* top gradient border */
@@ -8476,7 +8477,7 @@ body.boxed {
 .vm-card p {
     font-size: 14px;
     line-height: 1.7;
-    color: #555;
+    color: #000;
 }
 
 /* HOVER EFFECT */
@@ -8629,6 +8630,8 @@ body.boxed {
 .cotact-adress {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 /* Make columns flex */
@@ -8717,4 +8720,7 @@ body.boxed {
         padding-bottom: 15px !important;
     }
     
+}
+.about-services {
+    padding-top: 0 !important;
 }

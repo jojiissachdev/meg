@@ -1229,6 +1229,9 @@
     .home-index {
         display: none;
     }
+    .zeus.tparrows:before  {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 992px) {
