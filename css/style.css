@@ -1049,7 +1049,6 @@ div.aligncenter,
 .page-header .header-title {
     padding: 130px 0;
     text-align: center;
-    background-attachment: fixed;
     position: relative;
     background-size: cover;
     background-position: center center;
@@ -8723,4 +8722,8 @@ body.boxed {
 }
 .about-services {
     padding-top: 0 !important;
+}
+
+.mobile-only {
+  display: none;
 }

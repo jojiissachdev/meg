@@ -805,7 +805,7 @@
     div.fh-section-title h2,
     div.fh-testimonials h3 {
         font-size: 26px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .fh-service .item-service {
         width: 100%;
@@ -1083,6 +1083,7 @@
     .bz_search_bar {
         padding: 20px 0 19px 15px;
     }
+    
 }
 
 @media only screen and (max-width: 992px) {
@@ -1488,6 +1489,25 @@
         border-bottom: 1px solid #333;
         padding-bottom: 30px;
     }
+    .secpadd {
+        padding: 20px 0;
+    }
+    .breadcrumb-area {
+        padding: 10px 0 0 0 !important;
+    }
+    .breadcrumb {
+        padding-bottom: 0 !important;
+    }
+    .aboutus1 .fh-section-title, .servicessec .fh-section-title, .about-services .fh-section-title {
+        margin-bottom: 20px;
+    }
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block; /* Shows the mobile image */
+    }
+    
 }
 
 @media only screen and (max-width: 599px) {
