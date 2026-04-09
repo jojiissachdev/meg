@@ -8220,6 +8220,16 @@ body.boxed {
     background: linear-gradient(180deg, #0a3d91, #1db954);
 }
 
+.custom-card.reverse::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #0a3d91, #1db954);
+}
+
 /* ===== ROW FIX ===== */
 .custom-card .row {
     display: flex;

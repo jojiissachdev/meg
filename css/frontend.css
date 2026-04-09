@@ -34,7 +34,12 @@ Special Classes
 .paddtop0 {
     padding-top: 0!important;
 }
-
+.paddtop10 {
+    padding-top: 10px!important;
+}
+.paddtop20 {
+    padding-top: 20px!important;
+}
 .paddtop40 {
     padding-top: 40px!important;
 }
@@ -1929,7 +1934,7 @@ div.fh-button .vc_btn3.vc_btn3-style-custom:visited {
 .about-btn a {
     background-image: none !important;
     background-color: transparent !important;
-    border: 2px solid #f7f7f7 !important;
+    border: 2px solid #50B42E !important;
     color: #50B42E !important;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
