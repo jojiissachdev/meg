@@ -8735,5 +8735,29 @@ body.boxed {
 }
 
 .mobile-only {
-  display: none;
+    display: none;
+}
+.fh-service.service-grid .home-service-content{
+    height: 380px;
+}
+.ourfeatures2 .home-ourfeatures .fh-icon-box-3 {
+    height: 380px;
+}
+@media (max-width: 1260px) {
+    .ourfeatures2 .home-ourfeatures .fh-icon-box-3 {
+        height: 420px;
+    }
+}
+/* 1024px screens */
+@media (max-width: 1090px) {
+    .ourfeatures2 .home-ourfeatures .fh-icon-box-3 {
+        height: 450px;
+    }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+    .ourfeatures2 .home-ourfeatures .fh-icon-box-3 {
+        height: 320px;
+    }
 }
